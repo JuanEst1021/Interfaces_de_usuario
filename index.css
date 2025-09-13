@@ -1,0 +1,409 @@
+/* Estilos generales*/
+*{
+    box-sizing: border-box; /* esta propiedad hace que los elementos no crezcan mas alla de lo indicado*/
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+ul{ list-style: none;}
+li{font-size: 1.25em;}
+
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: blueviolet;
+}
+
+button:hover{/* Sombra para cuando pasemos el mouse por encima*/
+    background-color:rgb(89, 29, 145) ;
+}
+
+/*Container ajustar las cosas dentro de la pagina sin que se desorganice*/
+
+.container{
+    max-width: 1400px;
+    margin:auto;
+}
+
+.color-acento{color:blueviolet; }
+
+header{
+    background-color: rgb(245,245,245);
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold; /* negrita */
+    color: blueviolet; /* Color letras */
+    font-size: 1.6em; /* Tamaño */
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: blueviolet; /* Cuando el mouse pase por el menu se ponga morado*/
+}
+
+#hero{/*apartado principal de nuestra pagina*/
+    display: flex;/*Centrar lo principal*/
+    align-items: center;/*Centrar lo rpincipal*/
+    justify-content: center;/*centrar lo principal*/
+    text-align: center;/*Centrar lo principal*/
+    flex-direction: column;/*para que el contenido quede en columna*/
+    height: 90vh;/*Altura vh ca,bia en base a la altura de tu pantalla*/
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(media/hero.jpg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;/* Ocupe todo el espacio disponible */
+    background-position: center center; /*Centrar la imagen simepre*/
+}
+
+#hero h1{
+    color: white;
+}
+
+#hero button{
+    font-size: 1.75em;
+}
+
+#somos-proya.container{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#nuestros-programas{/*Fondo para toda la seccion*/
+    background-color: rgb(30,30,30);
+    color: white;
+    text-align: center;
+}
+
+#nuestros-programas .container{
+    padding: 150px 12px;
+}
+#nuestros-programas h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#nuestros-programas p{
+    display: none;/*desaparecer parrafos*/
+
+}
+
+#nuestros-programas .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 15px;
+
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(media/1695744816253.jpg);
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(media/images.jpg);
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(media/imagespy.jpg); 
+}
+
+
+#caracteristicas .container{
+    text-align: center; 
+    padding: 200px 12px;
+}
+
+#caracteristicas li{
+    margin: 15px 0px;
+    font-weight: bold;
+
+}
+
+#aplica-ya{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(30,30,30);
+    color: white;
+    height: 80vh;;
+
+}
+
+#aplica-ya h2{
+    font-size: 9vw;/*este vw sirve para que no se agrupe el titulo*/
+}
+
+#aplica-ya{
+    font-size: 5vw;
+}
+
+footer{
+    background-color: rgb(230, 230, 230);
+}
+
+footer p{
+    margin:0;
+    padding: 12px;
+    color: rgb(100,100,100);
+}
+
+footer.container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* 🔹 Estilos para nuevas secciones */
+#testimonios {
+    background: #f9f9f9;
+    padding: 100px 20px;
+    text-align: center;
+}
+#testimonios h2 {
+    margin-bottom: 40px;
+}
+.testimonio {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+/* FAQ */
+#faq {
+    background: rgb(30,30,30);
+    color: white;
+    padding: 100px 20px;
+}
+#faq details {
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    cursor: pointer;
+}
+#faq summary {
+    font-weight: bold;
+}
+
+/* Formulario */
+#contacto {
+    padding: 100px 20px;
+    text-align: center;
+}
+#contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: auto;
+}
+#contacto input, 
+#contacto select {
+    padding: 10px;
+    font-size: 1.1em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Botón flotante */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    font-size: 2em;
+    padding: 15px;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+.whatsapp-float:hover {
+    background: #1ebe5d;
+}
+
+/* Animaciones */
+h1, h2, h3, p, button {
+    animation: fadeIn 1.2s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (min-width: 720px){ /*Programar para Escritorio*/
+   
+    header{/*El menu baje junto a la pantalla*/
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction:row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #hero h1{
+        font-size: 5em;
+    }    
+
+    #somos-proya .container{
+        display: flex;
+        justify-content: space-evenly;/*ubicar elemnetos mas flexible*/
+    }
+
+    #somos-proya .texto{
+        width: 50%;
+        max-width: 600px;/*Hacer un ancho maximo al texto*/
+        text-align: initial;
+        padding-left: 30px ;
+        padding: 0px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #somose-proya h2{
+        margin-top: 0px;
+    }
+
+    #somos-proya .img-container{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        ),url(media/programaya.jpg);
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px;
+    }
+
+    #nuestros-programas .programas{
+        display: flex;
+        justify-content: center;
+    }
+
+
+    #nuestros-programas p{
+        display: block;
+        margin-bottom: 30px;
+    }
+    #nuestros-programas h2{
+        font-size: 4em;
+    }
+
+    #nuestros-programas h3{
+        margin-top: 0;
+    }
+
+    #nuestros-programas .carta{
+        padding: 15px;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+
+    #caracteristicas{
+        background-image: url(media/caracteristicas.jfif);
+        background-repeat: no-repeat;
+        background-size: 400px 400px;
+        background-position: calc(100vw - 500px) 120px;
+    }
+
+    #caracteristicas .container{
+        text-align: initial;
+    }
+
+    #caracteristicas ul{
+        margin-left: 100px;
+    }
+
+    #aplica-ya h2{
+        font-size: 0.5em;
+    }
+    #aplica-ya button{
+        font-size: 0.5em;
+    }
+
+    footer .container{
+        justify-content: flex-end;
+    }
+}
+@media (min-width: 1000px){
+    #caracteristicas{
+        background-position-x: calc(100vw - 800px) ;
+    }
+}
